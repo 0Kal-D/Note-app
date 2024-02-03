@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* ::-webkit-scrollbar {
+    width: 4px;
+}
+
+* ::-webkit-scrollbar-thumb {
+    width: 2px;
+    border-radius: 5px;
+    background-color: #2f2f2f;
+}
+
+* button:hover {
+    cursor: pointer;
+    background-color: #000;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9b99e;
+    color: #f8f8f8;
+    font-family: sans-serif;
+}
+
+main {
+    width: 86vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    border-radius: 26px;
+    box-shadow: 0 0 15px #2f2f2f;
+
+}
+
+
+main .header {
+    padding: 14px 10px;
+    border-radius: 26px 26px 0 0;
+    background-color: #2f2f2f;
+}
+
+main .header h1 {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+main .note-container {
+    margin: 4px 0;
+    padding: 8px 10px;
+    min-height: 18vh;
+    max-height: 62vh;
+    color: #000;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+main .note-container div {
+    margin: 1rem auto;
+}
+
+main .note-container div hr {
+    border: 1px solid #2f2f2f;
+}
+
+main .text-box {
+    width: 100%;
+    margin: 6px auto;
+    text-align: center;
+    border-radius: 0 0 26px 26px;
+}
+
+main .text-box .text-area {
+    resize: none;
+    width: 94%;
+    max-height: 12vh;
+    overflow-y: scroll;
+    padding: 4px 6px;
+    border-width: 2px 0;
+    background-color: #e5e5e5;
+    outline: none;
+    font-family: sans-serif;
+}
+
+main .text-box .btns {
+    margin-top: 10px;
+    padding-bottom: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+
+}
+
+main .text-box .btns button {
+    width: 40%;
+    padding: 2px 0;
+    margin: 6px 8px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background-color: #2f2f2f;
+    color: #f8f8f8;
+    font-size: 1.2rem;
+}
+
+main .text-box p {
+    color: #2f2f2f;
+    font-size: 12px;
+}
+
+@media screen and (min-width: 425px) {
+    main {
+        width: 80vw;
+    }
+
+    main .note-container {
+        min-height: 22vh;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    main .header h1 {
+        font-size: 2.2rem;
+    }
+
+    main {
+        width: 74vw;
+    }
+
+    main .text-box .text-area {
+        font-size: 1.1rem;
+    }
+
+    main .text-box .btns {
+        padding: 6px;
+    }
+
+    main .text-box .btns button {
+        width: 20%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    main {
+        width: 65vw;
+        height: 60vh;
+        padding-bottom: 12px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 10vh auto;
+        grid-template-areas:
+            "header header"
+            "textBox container";
+    }
+
+    main .header {
+        grid-area: header;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main .note-container {
+        grid-area: container;
+    }
+
+    main .text-box {
+        grid-area: textBox;
+        margin: 20px auto;
+        border: solid #2f2f2f;
+        border-width: 0 3px 0 0;
+        border-radius: 0 0;
+    }
+
+    main .text-box .text-area {
+        min-height: 80%;
+        font-size: 1rem;
+    }
+
+    main .text-box .btns button {
+        margin: 5px;
+        width: 28%;
+    }
+
+    main .text-box p {
+        margin-top: 4px;
+        font-size: 14px;
+
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    main {
+        border-radius: 3rem;
+    }
+
+    main .header {
+        border-radius: 3rem 3rem 0 0;
+    }
+
+    main .header h1 {
+        font-size: 4rem;
+    }
+
+    main .note-container {
+        font-size: 2rem;
+    }
+
+    main .text-box .text-area {
+        padding: 10px;
+        font-size: 1.8rem;
+    }
+
+    main .text-box .btns {
+        margin: 2rem auto;
+    }
+
+    main .text-box .btns button {
+        border-radius: 2rem;
+        font-size: 2.4rem;
+    }
+}

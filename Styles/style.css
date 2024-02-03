@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    background: linear-gradient(to bottom right, #731da8, #3370f3);
+    align-items: center;
+    justify-content: center;
+    color: #2c2c2c;
+    font-family: sans-serif;
+}
+
+main {
+    width: 60vw;
+    max-height: 65vh;
+    margin: 1rem;
+    background-color: #e4e4e4;
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 60vw;
+    padding-bottom: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    border-bottom: solid 2px #393939;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: -1;
+    backdrop-filter: blur(3px);
+}
+
+.header h1 {
+    width: 80%;
+    padding: 1.2rem;
+    text-align: left;
+}
+
+
+.clear {
+    width: 4rem;
+    height: 25px;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: #bf0000;
+    background-color: #f5e0e0;
+    transition-duration: .2s;
+
+}
+
+.clear:hover {
+    cursor: pointer;
+    background-color: #bf0000;
+    color: #f5e0e0;
+
+}
+
+.note-container {
+    margin: 12px;
+    padding-top: 1.4rem;
+    width: 84%;
+    overflow-y: scroll;
+}
+
+.note-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.note-container::-webkit-scrollbar-thumb {
+    margin-left: 40px;
+    background-color: #525252;
+    border-radius: 10px;
+}
+
+.note-container div {
+    margin: auto auto 2rem auto;
+    padding: auto 50px 6px auto;
+    width: 99%;
+    font-size: 1rem;
+    /* border-bottom: solid 2px; */
+}
+
+.note-container div hr {
+    width: 96%;
+    height: 1.6px;
+    background-color: #2c2c2c;
+    outline: none;
+    border: none;
+}
+
+.text-box {
+    resize: vertical;
+    margin: 0 2rem;
+    padding: 1rem;
+    width: 84%;
+    height: 80px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-family: Verdana;
+    font-weight: 500;
+    overflow-y: scroll;
+    outline: none;
+    border: 1px solid #2c2c2c;
+
+}
+
+.text-box::-webkit-scrollbar {
+    width: 3px;
+}
+
+.text-box::-webkit-scrollbar-thumb {
+    background-color: #525252;
+    border-radius: 5px;
+}
+
+.text-box::-webkit-scrollbar-button {
+    height: 16px;
+}
+
+.save-btn {
+    width: 8rem;
+    height: 30px;
+    padding: 40px auto;
+    margin: 1.2rem;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background-color: #2c64dc;
+    color: #ffffff;
+    transition-duration: .2s;
+}
+
+.save-btn:hover {
+    cursor: pointer;
+    background-color: #1d4fba;
+}
